@@ -433,7 +433,7 @@ export default class MultiSlider extends React.Component {
                     style={{
                       color: "#EEE",
                       position: "absolute",
-                      bottom: this.state.onePressed ? 20 : 15
+                      bottom: Platform.OS === 'ios' && this.state.onePressed ? 40 : Platform.OS === 'ios' ? 30 : this.state.onePressed ? 20 : 15
                     }}
                   >
                     {this.state.valueOne}
@@ -482,7 +482,7 @@ export default class MultiSlider extends React.Component {
                       style={{
                         color: "#EEE",
                         position: "absolute",
-                        bottom: this.state.twoPressed ? 20 : 15
+                        bottom: Platform.OS === 'ios' && this.state.twoPressed ? 40 : Platform.OS === 'ios' ? 30 : this.state.twoPressed ? 20 : 15
                       }}
                     >
                       {this.state.valueTwo}

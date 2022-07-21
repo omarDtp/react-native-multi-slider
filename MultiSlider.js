@@ -14,8 +14,6 @@ import {
 import DefaultMarker from "./DefaultMarker";
 import { createArray, valueToPosition, positionToValue } from "./converters";
 
-const ViewPropTypes = require("react-native").ViewPropTypes || View.propTypes;
-
 export default class MultiSlider extends React.Component {
   static propTypes = {
     values: PropTypes.arrayOf(PropTypes.number),
@@ -39,13 +37,13 @@ export default class MultiSlider extends React.Component {
 
     optionsArray: PropTypes.array,
 
-    containerStyle: ViewPropTypes.style,
-    trackStyle: ViewPropTypes.style,
-    selectedStyle: ViewPropTypes.style,
-    unselectedStyle: ViewPropTypes.style,
-    markerContainerStyle: ViewPropTypes.style,
-    markerStyle: ViewPropTypes.style,
-    pressedMarkerStyle: ViewPropTypes.style,
+    containerStyle: {},
+    trackStyle: {},
+    selectedStyle: {},
+    unselectedStyle: {},
+    markerContainerStyle: {},
+    markerStyle: {},
+    pressedMarkerStyle: {},
     valuePrefix: PropTypes.string,
     valueSuffix: PropTypes.string,
     enabledOne: PropTypes.bool,

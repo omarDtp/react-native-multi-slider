@@ -342,6 +342,7 @@ export default class MultiSlider extends React.Component {
       sliderLength,
       markerOffsetX,
       markerOffsetY,
+      textColor
     } = this.props;
     const twoMarkers = this.props.values.length == 2; // when allowOverlap, positionTwo could be 0, identified as string '0' and throwing 'RawText 0 needs to be wrapped in <Text>' error
 
@@ -429,7 +430,7 @@ export default class MultiSlider extends React.Component {
                   <Text
                     testID="valueOne"
                     style={{
-                      color: '#EEE',
+                      color: textColor,
                       position: 'absolute',
                       bottom: 20,
                     }}
@@ -479,7 +480,7 @@ export default class MultiSlider extends React.Component {
                     <Text
                       testID="valueTwo"
                       style={{
-                        color: '#EEE',
+                        color: textColor,
                         position: 'absolute',
                         bottom: 20,
                       }}
